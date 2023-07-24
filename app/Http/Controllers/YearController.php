@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Day;
-use App\Http\Requests\StoreDayRequest;
-use App\Http\Requests\UpdateDayRequest;
+use App\Models\Year;
+use App\Http\Requests\StoreYearRequest;
+use App\Http\Requests\UpdateYearRequest;
 
-class DayController extends Controller
+class YearController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +19,7 @@ class DayController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreDayRequest $request)
+    public function store(StoreYearRequest $request)
     {
         //
     }
@@ -27,7 +27,7 @@ class DayController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Day $day)
+    public function show(Year $year)
     {
         //
     }
@@ -35,7 +35,7 @@ class DayController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDayRequest $request, Day $day)
+    public function update(UpdateYearRequest $request, Year $year)
     {
         //
     }
@@ -43,7 +43,7 @@ class DayController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Day $day)
+    public function destroy(Year $year)
     {
         //
     }

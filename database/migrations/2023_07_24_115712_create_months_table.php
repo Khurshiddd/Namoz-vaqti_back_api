@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('months', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('year_id')->constrained();
+            $table->text('name');
             $table->timestamps();
         });
     }

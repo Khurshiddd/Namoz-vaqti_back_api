@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -15,8 +16,9 @@ class DayResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'date' => Carbon::now(),
             'bomdod' => $this->bomdod,
-            'sunrise' => $this->sunrise,
+            'tong' => $this->tong,
             'peshin' => $this->peshin,
             'asr' => $this->asr,
             'shom' => $this->shom,

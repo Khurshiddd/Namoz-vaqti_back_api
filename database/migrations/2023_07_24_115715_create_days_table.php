@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('days', function (Blueprint $table) {
             $table->id();
-            $table->time('bomdod');
-            $table->time('sunrise');
-            $table->time('peshin');
-            $table->time('asr');
-            $table->time('shom');
-            $table->time('xufton');
+            $table->foreignId('month_id')->constrained();
+            $table->string('bomdod');
+            $table->string('tong');
+            $table->string('peshin');
+            $table->string('asr');
+            $table->string('shom');
+            $table->string('xufton');
             $table->timestamps();
         });
     }
