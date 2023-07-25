@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Month;
 use App\Http\Requests\StoreMonthRequest;
 use App\Http\Requests\UpdateMonthRequest;
+use App\Http\Resources\MonthResource;
 
 class MonthController extends Controller
 {
@@ -13,7 +14,7 @@ class MonthController extends Controller
      */
     public function index()
     {
-        //
+        return MonthResource::collection(Month::all());
     }
 
     /**

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Day extends Model
 {
@@ -17,4 +18,9 @@ class Day extends Model
         'shom',
         'xufton'
     ];
+
+    public function month(): BelongsTo
+    {
+        return $this->belongsTo(Month::class);
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Year;
 use App\Http\Requests\StoreYearRequest;
 use App\Http\Requests\UpdateYearRequest;
+use App\Http\Resources\YearResource;
 
 class YearController extends Controller
 {
@@ -13,7 +14,7 @@ class YearController extends Controller
      */
     public function index()
     {
-        //
+        return YearResource::collection(Year::all());
     }
 
     /**

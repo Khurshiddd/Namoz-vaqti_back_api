@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\DayResource;
 use App\Models\Day;
 use App\Http\Requests\StoreDayRequest;
 use App\Http\Requests\UpdateDayRequest;
+use Carbon\Carbon;
 
 class DayController extends Controller
 {
@@ -13,7 +15,9 @@ class DayController extends Controller
      */
     public function index()
     {
-        //
+        $d = date('d');
+        $day = Day::where('id', $d)->get();
+        return DayResource::collection($day);
     }
 
     /**
@@ -29,7 +33,7 @@ class DayController extends Controller
      */
     public function show(Day $day)
     {
-        //
+        $today = Carbon::now();
     }
 
     /**
